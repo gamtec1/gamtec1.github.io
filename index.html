@@ -1,2 +1,18 @@
-# gamtec1.github.io  video page:   <a href="https://gamtec1.github.io/page">https://gamtec1.github.io/page</a><br />
-<video src="https://html-classic.itch.zone/html/16727906-1552503/blenders-sintel-directorscut-video.webm" loop autoplay playsinline controls id="myVideo" type="video/webm" style="width:100%">Vp9 use videoPlayer? .nojekyll</video>
+
+<video id="videoPlayer src="https://html-classic.itch.zone/html/16727906-1552503/blenders-sintel-directorscut-video.webm" loop autoplay playsinline controls id="myVideo" type="video/webm" style="width:100%">Vp9 use videoPlayer? .nojekyll</video>
+<div class="container">
+        <div class="controls">
+            <input type="text" id="videoUrl" placeholder="Enter video URL">
+            <button onclick="loadVideo()">Load Video</button>
+            <input type="text" alt="currently sample" value="https://html-classic.itch.zone/html/16727906-1552503/blenders-sintel-directorscut-video.webm" readonly />
+        </div>
+    </div>
+<br /># gamtec1.github.io  video page:   <a href="https://gamtec1.github.io/page">https://gamtec1.github.io/page</a>
+    <script>
+        function loadVideo() {
+            const url = document.getElementById('videoUrl').value;
+            if (url) {
+                document.getElementById('videoPlayer').src = url;
+            }
+        }
+    </script>
